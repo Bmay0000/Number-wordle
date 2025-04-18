@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bro, What’s the Number?</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-container">
+    <h1>Bro, What’s the Number?</h1>
+    <div class="timer" id="timer">02:00</div>
+    <div class="attempts-grid" id="attempts-grid"></div>
+    <form id="guess-form" autocomplete="off" style="display:none"><!-- form now handled in grid --></form>
+    <div class="result-message" id="result-message"></div>
+    <!-- Audio for win/fail -->
+    <audio id="win-audio" src="win.mp3" preload="auto"></audio>
+    <audio id="fail-audio" src="fail.mp3" preload="auto"></audio>
+    <script src="config.js"></script>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>

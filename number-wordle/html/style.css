@@ -1,0 +1,119 @@
+/* Copied from your previous style.css, can be further modularized if needed */
+body {
+  background: #181818;
+  color: #f4f4f4;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.game-container {
+  background: #232323;
+  padding: 2rem 2.5rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  min-width: 340px;
+  max-width: 420px;
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.2rem;
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+.timer {
+  text-align: center;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: #ffd700;
+}
+
+.attempts-grid {
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  gap: 0.5rem;
+  margin-bottom: 1.2rem;
+  min-height: 210px;
+}
+
+.attempt-row {
+  display: flex;
+  justify-content: center;
+  gap: 0.18rem;
+}
+
+.digit-box, .grid-guess-input {
+  width: 2.8rem;
+  height: 2.8rem;
+  min-width: 2.8rem;
+  min-height: 2.8rem;
+  background: #2e2e2e;
+  border-radius: 0.4rem;
+  border: 2px solid #444;
+  color: #f4f4f4;
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0.08rem;
+  transition: border 0.2s, background 0.2s;
+  box-sizing: border-box;
+  vertical-align: middle;
+  padding: 0;
+}
+
+.digit-box:last-child, .grid-guess-input:last-child {
+  margin-right: 0;
+}
+
+.grid-guess-input:focus {
+  border-color: #ffd700;
+  background: #232323;
+}
+
+.grid-guess-input:disabled {
+  background: #444;
+  color: #aaa;
+}
+
+.digit-box.correct {
+  background: #3cb371;
+  border-color: #3cb371;
+  color: #fff;
+}
+
+.digit-box.misplaced {
+  background: #ff9800;
+  border-color: #ff9800;
+  color: #fff;
+}
+
+.digit-box.incorrect {
+  background: #444;
+  border-color: #444;
+  color: #bbb;
+}
+
+.result-message {
+  text-align: center;
+  font-size: 1.25rem;
+  margin-top: 0.7rem;
+  font-weight: bold;
+  min-height: 1.5em;
+}
+
+.result-message.passed {
+  color: #3cb371;
+}
+
+.result-message.failed {
+  color: #ff5252;
+}
